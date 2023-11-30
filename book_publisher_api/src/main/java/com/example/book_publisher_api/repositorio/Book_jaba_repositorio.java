@@ -46,4 +46,24 @@ public class Book_jaba_repositorio {
                 .filter(libro -> libro.getId_jaba().equals(id))
                 .findFirst();
     }
+    public Optional<Book_jaba> updateBookById(Long id, Book_jaba updatedBook) {
+        Optional<Book_jaba> bookOptional = findById(id);
+
+        if (bookOptional.isPresent()) {
+            Book_jaba existingBook = bookOptional.get();
+
+            existingBook.setId_jaba(updatedBook.getId_jaba());
+            existingBook.setName_jaba(updatedBook.getName_jaba());
+            existingBook.setPublishers_jaba(updatedBook.getPublishers_jaba());
+            // Actualiza otros campos según sea necesario
+
+            // Si Publisher_jaba tiene una relación bidireccional, actualiza la referencia en las publicaciones también
+            for (Publisher_jaba publisher : existingBook.getPublishers_jaba()) {
+                publisher.setBook(existingBook);
+            }
+        }
+
+        return bookOptional;
+    }
+
 }
