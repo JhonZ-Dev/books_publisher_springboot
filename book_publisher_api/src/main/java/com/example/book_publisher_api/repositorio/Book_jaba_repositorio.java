@@ -5,6 +5,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public class Book_jaba_repositorio {
@@ -40,4 +41,9 @@ public class Book_jaba_repositorio {
         books_jaba.removeIf(book -> book.getId_jaba().equals(id));
     }
 
+    public Optional<Book_jaba> findById(Long id) {
+        return books_jaba.stream()
+                .filter(libro -> libro.getId_jaba().equals(id))
+                .findFirst();
+    }
 }
