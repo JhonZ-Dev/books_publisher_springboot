@@ -13,4 +13,10 @@ public class Book_jaba_repositorio {
     public void addBook(Book_jaba book) {
         books_jaba.add(book);
     }
+
+    public List<Book_jaba> getAllBooks() {
+        return books_jaba;
+    }
+
+
 }
