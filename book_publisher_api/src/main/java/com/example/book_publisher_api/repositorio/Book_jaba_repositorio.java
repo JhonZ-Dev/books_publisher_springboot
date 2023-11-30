@@ -36,4 +36,8 @@ public class Book_jaba_repositorio {
         }
         // Si no se encuentra el libro con el ID dado, puedes manejarlo según tus necesidades
     }
+    public void deleteBook(Long id) {
+        books_jaba.removeIf(book -> book.getId_jaba().equals(id));
+    }
+
 }
