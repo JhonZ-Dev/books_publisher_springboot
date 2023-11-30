@@ -9,4 +9,8 @@ import java.util.List;
 @Repository
 public class Book_jaba_repositorio {
     private List<Book_jaba> books_jaba = new ArrayList<>();
+
+    public void addBook(Book_jaba book) {
+        books_jaba.add(book);
+    }
 }
