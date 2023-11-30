@@ -55,4 +55,15 @@ public class Publisher_jaba {
     public void setBook(Book_jaba book) {
         this.book = book;
     }
+    public Publisher_jaba(Long id_publisher_jaba, String isbn_jaba, String title_jaba, Integer total_pages_jaba, String year_jaba, Book_jaba book) {
+        this.id_publisher_jaba = id_publisher_jaba;
+        this.isbn_jaba = isbn_jaba;
+        this.title_jaba = title_jaba;
+        this.total_pages_jaba = total_pages_jaba;
+        this.year_jaba = year_jaba;
+        this.book = book;
+    }
+    public Publisher_jaba(){
+
+    }
 }
