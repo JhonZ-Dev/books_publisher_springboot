@@ -26,4 +26,14 @@ public class Book_jaba_repositorio {
         }
         return null; // Si no se encuentra el libro con el ID dado
     }
+    public void updateBook(Book_jaba updatedBook) {
+        for (int i = 0; i < books_jaba.size(); i++) {
+            Book_jaba book = books_jaba.get(i);
+            if (book.getId_jaba().equals(updatedBook.getId_jaba())) {
+                books_jaba.set(i, updatedBook);
+                return;
+            }
+        }
+        // Si no se encuentra el libro con el ID dado, puedes manejarlo según tus necesidades
+    }
 }
