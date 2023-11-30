@@ -18,5 +18,12 @@ public class Book_jaba_repositorio {
         return books_jaba;
     }
 
-
+    public Book_jaba getBookById(Long id) {
+        for (Book_jaba book : books_jaba) {
+            if (book.getId_jaba().equals(id)) {
+                return book;
+            }
+        }
+        return null; // Si no se encuentra el libro con el ID dado
+    }
 }
