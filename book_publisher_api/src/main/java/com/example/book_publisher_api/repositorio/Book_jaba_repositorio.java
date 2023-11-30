@@ -1,5 +1,6 @@
 package com.example.book_publisher_api.repositorio;
 
+import com.example.book_publisher_api.modelo.Book_jaba;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
