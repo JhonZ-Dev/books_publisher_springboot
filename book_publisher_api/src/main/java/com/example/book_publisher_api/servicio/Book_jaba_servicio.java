@@ -33,6 +33,8 @@ public class Book_jaba_servicio {
     public Optional<Book_jaba> findById(Long id) {
         return repositorio_jaba.findById(id);
     }
-
+    public Optional<Book_jaba> updateBookById(Long id, Book_jaba updatedBook) {
+        return repositorio_jaba.updateBookById(id,updatedBook);
+    }
 
 }
