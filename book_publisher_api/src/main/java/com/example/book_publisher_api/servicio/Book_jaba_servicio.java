@@ -19,6 +19,9 @@ public class Book_jaba_servicio {
     public List<Book_jaba> getAllBooks() {
         return repositorio_jaba.getAllBooks();
     }
+    public Book_jaba getBookById(Long id) {
+        return repositorio_jaba.getBookById(id);
+    }
 
 
 }
