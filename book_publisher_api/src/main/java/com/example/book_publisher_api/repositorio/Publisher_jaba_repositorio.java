@@ -32,5 +32,8 @@ public class Publisher_jaba_repositorio {
         }
         // Si no se encuentra la publicación con el ID dado, puedes manejarlo según tus necesidades
     }
+    public void deletePublisher(Long id) {
+        publishers_jaba.removeIf(publisher -> publisher.getId_publisher_jaba().equals(id));
+    }
 
 }
