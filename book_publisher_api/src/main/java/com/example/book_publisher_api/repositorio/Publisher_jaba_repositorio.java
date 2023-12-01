@@ -11,5 +11,8 @@ public class Publisher_jaba_repositorio {
     public void addPublisher(Publisher_jaba publisher) {
         publishers_jaba.add(publisher);
     }
+    public List<Publisher_jaba> getAllPublishers() {
+        return publishers_jaba;
+    }
 
 }
