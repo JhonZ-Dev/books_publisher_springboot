@@ -5,6 +5,7 @@ import com.example.book_publisher_api.modelo.Publisher_jaba;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 public class Publisher_jaba_repositorio {
 
@@ -40,6 +41,13 @@ public class Publisher_jaba_repositorio {
         return publishers_jaba.stream()
                 .filter(libro -> libro.getId_publisher_jaba().equals(id))
                 .findFirst();
+    }
+    public List<Publisher_jaba> obtenerPublicacionesSAJorgue() {
+        return publishers_jaba.stream()
+                .filter(publisher -> publisher.getTitle_jaba() != null &&
+                        publisher.getTitle_jaba().startsWith("A") &&
+                        publisher.getTitle_jaba().contains("SA"))
+                .collect(Collectors.toList());
     }
 
 }
