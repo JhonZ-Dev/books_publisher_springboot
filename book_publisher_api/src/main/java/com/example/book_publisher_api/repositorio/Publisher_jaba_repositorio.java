@@ -22,4 +22,15 @@ public class Publisher_jaba_repositorio {
         }
         return null; // Si no se encuentra la publicación con el ID dado
     }
+    public void updatePublisher(Publisher_jaba updatedPublisher) {
+        for (int i = 0; i < publishers_jaba.size(); i++) {
+            Publisher_jaba publisher = publishers_jaba.get(i);
+            if (publisher.getId_publisher_jaba().equals(updatedPublisher.getId_publisher_jaba())) {
+                publishers_jaba.set(i, updatedPublisher);
+                return;
+            }
+        }
+        // Si no se encuentra la publicación con el ID dado, puedes manejarlo según tus necesidades
+    }
+
 }
