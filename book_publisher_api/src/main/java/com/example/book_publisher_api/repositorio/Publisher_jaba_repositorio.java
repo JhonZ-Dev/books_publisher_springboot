@@ -8,4 +8,8 @@ import java.util.List;
 public class Publisher_jaba_repositorio {
 
     private List<Publisher_jaba> publishers_jaba = new ArrayList<>();
+    public void addPublisher(Publisher_jaba publisher) {
+        publishers_jaba.add(publisher);
+    }
+
 }
