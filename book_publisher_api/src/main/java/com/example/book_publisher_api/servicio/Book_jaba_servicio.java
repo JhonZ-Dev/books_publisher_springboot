@@ -22,6 +22,9 @@ public class Book_jaba_servicio {
     public Book_jaba getBookById(Long id) {
         return repositorio_jaba.getBookById(id);
     }
-
+    public void updateBook(Book_jaba updatedBook) {
+        repositorio_jaba.updateBook(updatedBook);
+        // Si no se encuentra el libro con el ID dado, puedes manejarlo según tus necesidades
+    }
 
 }
