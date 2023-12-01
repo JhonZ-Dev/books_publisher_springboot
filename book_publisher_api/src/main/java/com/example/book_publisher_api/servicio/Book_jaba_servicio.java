@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class Book_jaba_servicio {
@@ -28,6 +29,9 @@ public class Book_jaba_servicio {
     }
     public void deleteBook(Long id) {
         repositorio_jaba.deleteBook(id);
+    }
+    public Optional<Book_jaba> findById(Long id) {
+        return repositorio_jaba.findById(id);
     }
 
 
