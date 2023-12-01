@@ -26,5 +26,9 @@ public class Book_jaba_servicio {
         repositorio_jaba.updateBook(updatedBook);
         // Si no se encuentra el libro con el ID dado, puedes manejarlo según tus necesidades
     }
+    public void deleteBook(Long id) {
+        repositorio_jaba.deleteBook(id);
+    }
+
 
 }
