@@ -4,6 +4,7 @@ import com.example.book_publisher_api.modelo.Publisher_jaba;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class Publisher_jaba_repositorio {
 
@@ -34,6 +35,11 @@ public class Publisher_jaba_repositorio {
     }
     public void deletePublisher(Long id) {
         publishers_jaba.removeIf(publisher -> publisher.getId_publisher_jaba().equals(id));
+    }
+    public Optional<Publisher_jaba> findById(Long id) {
+        return publishers_jaba.stream()
+                .filter(libro -> libro.getId_publisher_jaba().equals(id))
+                .findFirst();
     }
 
 }
