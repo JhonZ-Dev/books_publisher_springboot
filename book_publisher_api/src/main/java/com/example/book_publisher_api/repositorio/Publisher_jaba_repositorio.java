@@ -14,5 +14,12 @@ public class Publisher_jaba_repositorio {
     public List<Publisher_jaba> getAllPublishers() {
         return publishers_jaba;
     }
-
+    public Publisher_jaba getPublisherById(Long id) {
+        for (Publisher_jaba publisher : publishers_jaba) {
+            if (publisher.getId_publisher_jaba().equals(id)) {
+                return publisher;
+            }
+        }
+        return null; // Si no se encuentra la publicación con el ID dado
+    }
 }
